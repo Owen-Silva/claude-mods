@@ -1,0 +1,8 @@
+{
+  "name": "fleet",
+  "version": "0.1.0",
+  "description": "Live view of this session's subagents: lane, model, elapsed, context % against the 32/40% rule and the 5-running cap; receipts of the files each one actually wrote (FleetReceipts tool).",
+  "author": { "name": "Owen Silva" },
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}

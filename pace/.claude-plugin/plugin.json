@@ -1,0 +1,8 @@
+{
+  "name": "pace",
+  "version": "0.1.0",
+  "description": "Shows whether the session is on pace to use the 5-hour rate-limit window by its end, and how big the next agent round can be.",
+  "author": { "name": "Owen Silva" },
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}

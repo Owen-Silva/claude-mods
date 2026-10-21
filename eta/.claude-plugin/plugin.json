@@ -1,0 +1,8 @@
+{
+  "name": "eta",
+  "version": "0.1.0",
+  "description": "How much longer: a live countdown above the prompt from the model's declared estimate, running subagents' usual durations and calibration, plus every session on this machine in /eta.",
+  "author": { "name": "Owen Silva" },
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}

@@ -1,0 +1,1 @@
+{ "name": "rails", "version": "0.1.0", "description": "Guardrails that turn never-do-X rules into tool-call denies, with a /rails escape hatch", "author": { "name": "Owen Silva" }, "license": "MIT", "types": "./types/index.d.ts" }

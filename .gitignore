@@ -1,0 +1,16 @@
+# engine-written at every load; regenerated, not source
+*/.claude-plugin/types/
+*/tsconfig.json
+node_modules/
+
+# Personal, machine-local config (rules.local.ts, free-reset.local.json, *.local.test.ts, ...):
+# each mod imports or reads it at runtime, and it must never be committed.
+*.local.*
+*.local/
+# ...except the tracked fallback a hooks module resolves to when its rules.local.ts is missing
+!rules.local/
+# Belt and braces: runtime data, logs and secrets never belong in the repo.
+mods-data/
+*.jsonl
+*.log
+.env*

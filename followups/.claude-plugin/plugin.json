@@ -1,0 +1,1 @@
+{ "name": "followups", "version": "0.1.0", "description": "Live checklist of after-X-always-do-Y rules: edits and commands open items, the matching command closes them, one end-of-turn nudge per item", "author": { "name": "Owen Silva" }, "license": "MIT", "types": "./types/index.d.ts" }
