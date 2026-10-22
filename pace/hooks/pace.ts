@@ -365,9 +365,9 @@ export function fmtDays(ms: number): string {
   return h >= 24 ? `${Math.floor(h / 24)}d ${h % 24}h` : `${h}h`
 }
 
-/** `Mon, Jan 5, 9:42 PM`, Pacific time. */
+/** `Mon, Jan 5, 9:42 PM`, in the machine's local time zone. */
 export function fmtWhen(t: number): string {
-  return new Date(t).toLocaleString('en-US', { timeZone: 'America/Los_Angeles', weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })
+  return new Date(t).toLocaleString('en-US', { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })
 }
 
 /** The press-the-free-reset toast: the highest weekly level crossed, once per weekly cycle. */

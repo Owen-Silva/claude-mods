@@ -6,6 +6,7 @@ import {
   bandLine,
   commandText,
   freshest,
+  fmtWhen,
   freeResetToast,
   parseFreeReset,
   trackFreeReset,
@@ -250,5 +251,20 @@ describe('free-reset promo config', () => {
     const prev = { usedAt: null, last: { percentUsed: 90, resetsAt: NOW + 3 * 24 * 60 * MIN, observedAt: NOW - 60 * MIN } }
     const next = trackFreeReset(prev, { ...s.reading!, sevenDay: { percentUsed: 5, resetsAt: NOW + 3 * 24 * 60 * MIN } }, NOW, cfg)
     expect(next.usedAt).toBe(NOW)
+  })
+
+  test('a used free reset is reported in local wall-clock time', () => {
+    const used = new Date(2026, 0, 5, 21, 42).getTime() // local date parts: holds in any time zone
+    const v = paceView({ ...snap(10, 180), freeResetUsedAt: used })
+    expect(commandText(v, parseFreeReset(JSON.stringify(PROMO))).replace(/\s/g, ' ')).toContain('free reset   used Mon, Jan 5, 9:42 PM')
+  })
+})
+
+describe('times', () => {
+  // Built from local date parts, so the expectation holds in any time zone the tests run in.
+  const LOCAL = new Date(2026, 0, 5, 21, 42).getTime()
+
+  test('fmtWhen shows the local wall-clock time, not a fixed zone', () => {
+    expect(fmtWhen(LOCAL).replace(/\s/g, ' ')).toBe('Mon, Jan 5, 9:42 PM') // some ICU builds put U+202F before PM
   })
 })
