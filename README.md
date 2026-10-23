@@ -1,4 +1,4 @@
-# claude-mods
+# mods
 
 Five Claude Code mods that add guardrails, follow-up checklists, live ETAs, subagent visibility and rate-limit pacing to every session.
 
@@ -25,7 +25,7 @@ Five Claude Code mods that add guardrails, follow-up checklists, live ETAs, suba
 ## Install
 
 ```sh
-git clone https://github.com/Owen-Silva/claude-mods ~/.claude/mods
+git clone https://github.com/Owen-Silva/mods ~/.claude/mods
 cd ~/.claude/mods
 cp rails/hooks/rules.example.ts rails/hooks/rules.local.ts
 cp followups/hooks/rules.example.ts followups/hooks/rules.local.ts
